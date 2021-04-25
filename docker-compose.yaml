@@ -1,0 +1,15 @@
+version: "3"
+services:
+
+# CoreDNS
+# https://hub.docker.com/r/coredns/coredns
+
+  coredns:
+    container_name: CoreDNS
+    image: coredns/coredns:1.8.3
+    restart: always
+    command: -conf /coredns-cfg/Corefile
+    ports:
+      - "53:53/udp"
+    volumes:
+      - ./coredns-cfg/:/coredns-cfg/
