@@ -1,0 +1,6 @@
+testdomain.com.            IN  SOA ns1.testdomain.com. admin.testdomain.com. 2021040101 7200 3600 1209600 3600
+server1.testdomain.com.    IN  A   192.168.1.1
+server2.testdomain.com.    IN  A   192.168.1.2
+server3.testdomain.com.    IN  A   192.168.1.3
+server4.testdomain.com.    IN  A   192.168.1.3
+www.testdomain.com.        IN  CNAME   server1

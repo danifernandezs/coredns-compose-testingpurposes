@@ -1,0 +1,16 @@
+# Forward all DNS queries does not matched with the "test domain"
+# Show the errors with the forwarded queries
+
+.:53 {
+    forward . 8.8.8.8 8.8.4.4 1.1.1.1
+    errors
+}
+
+# Test domain DNS records
+# Log all queries and errors
+
+testdomain.com:53 {
+    file /coredns-cfg/testdomain.db
+    log
+    errors
+}
